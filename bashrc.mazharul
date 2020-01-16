@@ -1,0 +1,81 @@
+PS1='\n\[\e[36m\h: \e[32m\w\e[0m\]\n\$ '  #current best by 06/17
+#
+#PS1='\n\[\e[34m\h: \e[32m\w\e[0m\n\]\$ '  #line problem 
+#PS1='\n\e[34m\h: \e[32m\w\e[0m\n\$ '      #actual one
+#PS1='\n\[\e[34m\h: \e[32m\w:\w\e[0m\n\]\$ '
+#PS1='\n\e[34m\h: \e[32m\w\e[0m\n\$ '
+#PS1="[\[\033[32m\]\w]\[\033[0m\]\n\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]"
+#PS1='\[MAZHARULISLAM XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX::\] \r\e\e\n\e\r\e'
+#PS1='\[ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ::\] '
+
+# user file-creation mask mode
+umask 007
+
+# display: "<vnc server>:<port>"
+#export DISPLAY=
+
+# user
+export LC_ALL=C
+#export LC_ALL=en_US.UTF-8 #testing
+export LM_PROJECT=PTM
+export USER_ITOOLS=~/.itools
+
+# licenses
+export LM_LICENSE_FILE=\
+1717@plxs0051.pdx.intel.com:\
+1707@plxs0304.pdx.intel.com:\
+2222@pdxss963.pdx.intel.com:\
+7438@fcylic01a.fc.intel.com:\
+1700@ptdht4.ra.intel.com:\
+2700@ilic1007.iil
+export KLOCWORK_LICENSE_FILE=\
+7500@dp2slic101.amr.corp.intel.com:\
+7500@jf3slic002.amr.corp.intel.com
+export LM_LICENSE_FILE="8505@etnus02p.elic.intel.com:8505@etnus01p.elic.intel.com"
+
+export EDITOR=vim
+
+
+source ~/.aliases
+
+
+
+export WD2=/nfs/orto/proj/tapeout/clt_na10/mazharul/
+export WD=/nfs/orto/proj/tapeout/cit_dev22/mazharul
+export IFRAC=/nfs/orto/proj/tapeout/flows/ifracture/opc/mazama/1278.X/DNx/OPC_1278.0_DNX_v1
+
+export INTEL_LICENSE_FILE=/usr/intel/common/pkgs/ics/licenses
+
+
+#stty erase '^?' # Sun keyboard
+#export DISPLAY=dlxc0913.pdx.intel.com:16
+#export DISPLAY=dlxcq2055.pdx.intel.com:26
+#export DISPLAY=dlxcq2001.pdx.intel.com:39
+
+
+function   setenv
+{
+   #declare -x "$1=$2"
+   eval "export $1=$2"
+}
+
+#export PYTHONUSERBASE=/hnfs/torcfs03n01a/vol/clt_dev06/asreedha/my_env/lib_2_14_18  # for hdbscan and others
+#export PYTHONPATH=/nfs/orto/proj/tapeout/cit_dev11/mazharul/DATAPAN14_MISC/02CBCSherlock/STETHOSCOPE/
+#export PYTHONPATH=/nfs/orto/proj/tapeout/cit_dev11/mazharul/DATAPAN14_MISC/02CBCSherlock/00NEWSHERLOCK/STETHOSCOPE
+
+
+#export PYTHONPATH=./ #set this correctly before running python. Should be sherlock path if sherlock is run
+
+
+#AIPG Commands
+export CUDA_VISIBLE_DEVICES=3
+export NV_GPU=$CUDA_VISIBLE_DEVICES
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda/bin:$PATH
+export http_proxy=http://proxy-chain.intel.com:911
+export https_proxy=http://proxy-chain.intel.com:912
+export ftp_proxy=http://proxy-chain.intel.com:911
+export socks_proxy=http://proxy-us.intel.com:1080
+export no_proxy=intel.com,.intel.com,localhost,127.0.0.1
+export LD_LIBRARY_PATH=$VIRTUAL_ENV/lib/python2.7/site-packages/paddle/libs
+

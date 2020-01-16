@@ -1,0 +1,2 @@
+# [ should be inside ~/.vnc/config    ] 
+RandR=1920x1080,1920x1200,1680x1050,1600x900,1440x900,1516x781
