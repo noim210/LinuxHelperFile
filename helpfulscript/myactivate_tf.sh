@@ -46,7 +46,7 @@ if [ $found -eq 0 ]; then
         #echo $i
         cd ..
         foldername=$(basename $PWD)
-        echo "foldername="$foldername
+        #echo "foldername="$foldername
         
         if [ "$foldername" == "mazharul" ]; then break; fi
         if [ "$foldername" == "home" ]; then break; fi
